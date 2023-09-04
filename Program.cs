@@ -107,7 +107,7 @@ while (!cancel.Token.IsCancellationRequested)
         string savePath = quicksaveFilePath.Replace("Quicksave0", $"Save{highestSaveId + 1}");
 
         Console.WriteLine(
-            $"Copying '{savePath}' to '{quicksaveFilePath}' because quicksave was " +
+            $"Copying '{quicksaveFilePath}' to '{savePath}' because quicksave was " +
             $"modified {timeSinceLastQuicksave} ago (at {quicksaveFileWriteTime})");
 
         if (TryCopyFile(quicksaveFilePath, savePath))
